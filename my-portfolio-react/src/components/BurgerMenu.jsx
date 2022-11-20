@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { RiMenuLine } from 'react-icons/ri';
+import { NavLink } from 'react-router-dom';
+import style from './BurgerMenu.css';
 
 function OffCanvas() {
   const [show, setShow] = useState(false);
@@ -11,16 +13,19 @@ function OffCanvas() {
 
   return (
     <>
-      <Button variant="outline-light" onClick={toggleShow} className="me-2">
+      <Button variant="outline-dark" onClick={toggleShow} className="me-2">
         <RiMenuLine />
       </Button>
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          <Offcanvas.Title>Menu</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+        <Offcanvas.Body className={style.active}>
+          <NavLink to="." end>
+            Home
+          </NavLink>
+          <NavLink to="about">About</NavLink>
+          <NavLink to="about">About</NavLink>
         </Offcanvas.Body>
       </Offcanvas>
     </>

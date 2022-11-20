@@ -1,16 +1,16 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import OffCanvas from './Offcanvas';
+import BurgerMenu from './BurgerMenu';
 
-function ContainerInsideExample() {
+function NavBar() {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="light" variant="light">
       <Container>
-        <OffCanvas />
+        <BurgerMenu />
         <Navbar.Brand href="/">CHERKASHYN DMYTRO</Navbar.Brand>
       </Container>
     </Navbar>
   );
 }
 
-export default ContainerInsideExample;
+export default NavBar;
